@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="se">
+<head>
+<title>Välkommen till Falu STF Hotell och Vandrarhem</title>
+<meta charset="UTF-8">
+<link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+<link rel="canonical" href="https://stffalun.se">
+<meta content="STF Falun Hotell" property="og:title">
+<meta content="https://stffalun.se" property="og:url">
+<meta content="website" property="og:type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Välkommen till STF Falun Hotell/Vandrarhem.">
+<meta name="keywords" content="falun, vandrarhem, stf vandrarhem dalarna, stf hotel falun, stf falun hotell, stf hotell falun">
+<link rel="stylesheet" href="/w3.css">
+<link rel="stylesheet" href="/cal.css">
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="/" class="w3-bar-item w3-button">HEM</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="/logi" class="w3-bar-item w3-button">LOGI</a>
+      <a href="/info" class="w3-bar-item w3-button">INFO</a>
+      <a href="/om-falun" class="w3-bar-item w3-button">OM FALUN</a>
+      <a href="/skating" class="w3-bar-item w3-button">SKATING</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="/hus1_sommar.jpg" alt="Huset på sommaren" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge w3-white">Välkommen till Falu STF Vandrarhem!</h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+        <div id="calendar">
+            <div id="calendar_header"><i class="icon-chevron-left"></i>          <h1></h1><i class="icon-chevron-right"></i>         </div>
+            <div id="calendar_weekdays"></div>
+            <div id="calendar_content"></div>
+        </div>
+        <select class="w3-select" name="antal_rum">
+            <option value="" disabled selected>Välj antal rum</option>
+            <option value="1">1 rum (2 gäster)</option>
+            <option value="2">2 rum (upp till 5 gäster)</option>
+            <option value="3">3 rum (upp till 8 gäster)</option>
+          </select>
+        <button onclick="booked()" class="w3-margin-top w3-btn w3-white w3-border w3-border-orange w3-round-xlarge">Boka</button>
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Falu STF Hotell</h1><br>
+      <p class="w3-large">Boende nära Sjön Runn, lite utanför centrum men ändå centralt. 
+        Hos oss är man välkommen året runt. Vi finns till Er tjänst om ni vill ha tips på aktiviteter. 
+        Vi har även färdiga paket att boka. Vandrarhem eller hotell, man kan kalla oss för båda.</p>
+      <p class="w3-large w3-text-grey w3-hide-medium">Varmt Välkomna!</p>
+    </div>
+  </div>
+ 
+  <div class="w3-row-padding">
+
+        <div class="w3-third">
+        <div class="w3-card">
+        <img src="/logi1_hg.jpg" style="width:100%">
+        <div class="w3-container">
+        <h4>Sovrum</h4>
+        </div>
+        </div>
+        </div>
+        
+        <div class="w3-third">
+        <div class="w3-card">
+        <img src="/rum_hg_low.jpg" style="width:100%">
+        <div class="w3-container">
+        <h4>Sovrum</h4>
+        </div>
+        </div>
+        </div>
+        
+        <div class="w3-third">
+        <div class="w3-card">
+        <img src="/kok_hg_low.jpg" style="width:100%">
+        <div class="w3-container">
+        <h4>Kök</h4>
+        </div>
+        </div>
+        </div>
+    </div>
+<!-- End page content -->
+
+</div>
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+    <p>©2018-2022 STF Falu Vandrarhem.</p>
+    <a href="https://www.svenskaturistforeningen.se/" rel="nofollow"><img src="/hostel.png"></a>
+    <a href="https://www.hihostels.com/" rel="nofollow"><img src="/stf_symbol_80.png"></a>
+    
+   
+  </footer>
+<script>
+    $(function(){function c(){p();var e=h();var r=0;var u=false;l.empty();while(!u){if(s[r]==e[0].weekday){u=true}else{l.append('<div class="blank"></div>');r++}}for(var c=0;c<42-r;c++){if(c>=e.length){l.append('<div class="blank"></div>')}else{var v=e[c].day;var m=g(new Date(t,n-1,v))?'<div class="today">':"<div>";l.append(m+""+v+"</div>")}}var y=o[n-1];a.css("background-color",y).find("h1").text(i[n-1]+" "+t);f.find("div").css("color",y);l.find(".today").css("background-color",y);d()}function h(){var e=[];for(var r=1;r<v(t,n)+1;r++){e.push({day:r,weekday:s[m(t,n,r)]})}return e}function p(){f.empty();for(var e=0;e<7;e++){f.append("<div>"+s[e].substring(0,3)+"</div>")}}function d(){var t;var n=$("#calendar").css("width",e+"px");n.find(t="#calendar_weekdays, #calendar_content").css("width",e+"px").find("div").css({width:e/7+"px",height:e/7+"px","line-height":e/7+"px"});n.find("#calendar_header").css({height:e*(1/7)+"px"}).find('i[class^="icon-chevron"]').css("line-height",e*(1/7)+"px")}function v(e,t){return(new Date(e,t,0)).getDate()}function m(e,t,n){return(new Date(e,t-1,n)).getDay()}function g(e){return y(new Date)==y(e)}function y(e){return e.getFullYear()+"/"+(e.getMonth()+1)+"/"+e.getDate()}function b(){var e=new Date;t=e.getFullYear();n=e.getMonth()+1}var e=480;var t=2013;var n=9;var r=[];var i=["JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"];var s=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];var o=["#16a085","#1abc9c","#c0392b","#27ae60","#FF6860","#f39c12","#f1c40f","#e67e22","#2ecc71","#e74c3c","#d35400","#2c3e50"];var u=$("#calendar");var a=u.find("#calendar_header");var f=u.find("#calendar_weekdays");var l=u.find("#calendar_content");b();c();a.find('i[class^="icon-chevron"]').on("click",function(){var e=$(this);var r=function(e){n=e=="next"?n+1:n-1;if(n<1){n=12;t--}else if(n>12){n=1;t++}c()};if(e.attr("class").indexOf("left")!=-1){r("previous")}else{r("next")}})})
+    function booked() {
+        console.log(booked)
+        window.alert("Bokat och klart, tackar!");
+    }
+</script>
+</body>
+</html>
